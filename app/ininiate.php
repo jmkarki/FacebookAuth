@@ -2,7 +2,7 @@
 session_start();
 require_once 'vendor/autoload.php';
 Facebook\FacebookSession::setDefaultApplication('434213483392823', '3df738a506be2fd626b1db802409e023');
-$facebook = new Facebook\FacebookRedirectLoginHelper('http://localhost/Facebook-auth/index.php');
+$facebook = new Facebook\FacebookRedirectLoginHelper('http://localhost/FacebookAuth/index.php');
  try{
  	if($session = $facebook->getSessionFromRedirect()){
  		$_SESSION['facebook'] = $session->getToken();
